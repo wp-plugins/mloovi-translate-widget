@@ -22,10 +22,6 @@ This can have incredible results for SEO, we currently have sites indexed by ove
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
 1. Upload `mloovi` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
