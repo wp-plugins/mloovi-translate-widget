@@ -166,6 +166,9 @@ var $j = jQuery.noConflict();
 
 		<!-- Your Name: Text Input -->
 		<p>
+			To get a custom Mloovi URL please send an email to support@mloovi.com, this will be automated in future releases.
+		</p>
+		<p>
 			<label for="<?php echo $this->get_field_id( 'feed_url' ); ?>"><?php _e('Mloovi Custom URL:', 'mloovi'); ?></label>
 			<input id="<?php echo $this->get_field_id( 'feed_url' ); ?>" name="<?php echo $this->get_field_name( 'feed_url' ); ?>" value="<?php echo $instance['feed_url']; ?>" style="width:100%;" />
 		</p>
