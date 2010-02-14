@@ -3,7 +3,7 @@
  * Plugin Name: Mloovi Translate Widget
  * Plugin URI: http://mloovi.com
  * Description: Translate your blog into 52 languages instantly!
- * Version: 0.1
+ * Version: 0.1.1
  * Author: Mike Robinson
  * Author URI: http://www.digitalegg.net
  *
