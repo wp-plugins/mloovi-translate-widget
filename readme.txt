@@ -33,7 +33,7 @@ e.g.
 
 = How do I get a Mloovi custom URL? =
 
-You will need to send an email to support@mloovi.com with the URL of your feed, we will then create a custom tag for you which you can use in the widget.
+You will need to send an email to support@mloovi.com with the URL of your feed, we will then create a custom URL for you which you can use in the widget. in future release we will be making this automatic.
 
 = Can I brand the Mloovi pages with my own logo and colours? =
 
@@ -43,7 +43,14 @@ If you want this service send an email to support@mloovi.com with the URL of you
 
 == Screenshots ==
 
+1. Screenshot of the widget running on [Digital Egg Blog](http://blog.digitalegg.net/ "Digital Egg Blog") screenshot-1.png.
+
 == Changelog ==
+
+= 0.1 =
+* First release of the Mloovi Widget
 
 == Upgrade Notice ==
 
+= 0.1 =
+* First release so no need to upgrade at this time, section added so the Readme.txt will validate!
