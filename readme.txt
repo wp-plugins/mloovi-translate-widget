@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: mikedigitalegg
 Donate link: http://mloovi.com/donate
-Tags: mloovi, 
+Tags: mloovi, translate, blog, rss
 Requires at least: 2.8
 Tested up to: 2.9.1
 Stable tag: 0.1
