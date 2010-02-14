@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: mikedigitalegg
 Donate link: http://mloovi.com/donate
-Tags: mloovi, translate, blog, rss
+Tags: mloovi, 
 Requires at least: 2.8
 Tested up to: 2.9.1
-Stable tag: 0.1
+Stable tag: 0.1.1
 
 Translate your blog into 52 languages instantly!
 
@@ -21,10 +21,6 @@ Unlike most translation widgets Mloovi creates a permanent URL for your translat
 This can have incredible results for SEO, we currently have sites indexed by over 50 different language versions of Google as well as Yahoo, Bing, Baidu, Yandex & Seznam. Your content become available to the whole world no matter what language they speak!
 
 == Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
 
 1. Upload `mloovi` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
@@ -49,6 +45,10 @@ If you want this service send an email to support@mloovi.com with the URL of you
 
 = 0.1 =
 * First release of the Mloovi Widget
+
+= 0.1.1 =
+
+Minor release which includes better instructions on how to get a Mloovi custom URL.
 
 == Upgrade Notice ==
 
