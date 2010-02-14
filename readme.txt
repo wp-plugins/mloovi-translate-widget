@@ -54,3 +54,6 @@ Minor release which includes better instructions on how to get a Mloovi custom U
 
 = 0.1 =
 * First release so no need to upgrade at this time, section added so the Readme.txt will validate!
+
+= 0.1.1 =
+* Better instructions on how to get a Mloovi custom URL
