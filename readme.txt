@@ -10,8 +10,6 @@ Translate your blog into 52 languages instantly!
 
 == Description ==
 
-* Note: You will need to add your feed to Mloovi.com and request a Custom URL by emailing support[at]mloovi[dot]com for the widget to work. *
-
 The Mloovi widget allows you to easily add links to 52 different language versions of your blog and RSS feeds.
 
 The widget allow you to choose which languages show in your sidebar and adds a 'more' link to show all 52 languages. The widget can be styled using your standard CSS file so it will fit in with the look and feel of your site.
@@ -31,7 +29,7 @@ This can have incredible results for SEO, we currently have sites indexed by ove
 
 = How do I get a Mloovi custom URL? =
 
-You will need to send an email to support@mloovi.com with the URL of your feed, we will then create a custom URL for you which you can use in the widget. in future release we will be making this automatic.
+The widget should generate your URLs based on your blog URL. If you want to change this please email support@mloovi.com
 
 = Can I brand the Mloovi pages with my own logo and colours? =
 
