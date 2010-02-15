@@ -3,7 +3,7 @@
  * Plugin Name: Mloovi Translate Widget
  * Plugin URI: http://mloovi.com/pages/wordpress-plugin
  * Description: Translate your blog into 52 languages instantly!
- * Version: 0.1.1
+ * Version: 0.1.2
  * Author: Mike Robinson
  * Author URI: http://www.digitalegg.net
  *
@@ -166,7 +166,7 @@ var $j = jQuery.noConflict();
 
 		<!-- Your Name: Text Input -->
 		<p>
-			To get a custom Mloovi URL please send an email to support@mloovi.com, this will be automated in future releases.
+			To get a custom Mloovi URL please add your feed to <a href="http://mloovi.com">Mloovi</a> then send an email to support@mloovi.com, this will be automated in future releases.
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'feed_url' ); ?>"><?php _e('Mloovi Custom URL:', 'mloovi'); ?></label>
