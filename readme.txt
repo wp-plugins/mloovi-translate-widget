@@ -4,7 +4,7 @@ Donate link: http://mloovi.com/donate
 Tags: mloovi, translate, blog, rss
 Requires at least: 2.8
 Tested up to: 2.9.1
-Stable tag: 0.1.3
+Stable tag: 0.2
 
 Translate your blog into 52 languages instantly!
 
@@ -60,6 +60,10 @@ Added more instructions on how to get the widget to work.
 
 Added timeout to the CURL functions in case of problems with mloovi.com
 
+= 0.2 =
+
+The widget now auto generates the feeds on Mloovi.com and the custom URL. The widget should now work first time without any intervention!
+
 == Upgrade Notice ==
 
 = 0.1 =
@@ -71,3 +75,7 @@ Added timeout to the CURL functions in case of problems with mloovi.com
 = 0.1.3 =
 
 Added timeout to the CURL functions in case of problems with mloovi.com
+
+= 0.2 =
+
+The widget now auto generates the feeds on Mloovi.com and the custom URL. The widget should now work first time without any intervention!

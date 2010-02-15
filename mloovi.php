@@ -3,7 +3,7 @@
  * Plugin Name: Mloovi Translate Widget
  * Plugin URI: http://mloovi.com/pages/wordpress-plugin
  * Description: Translate your blog into 52 languages instantly!
- * Version: 0.1.3
+ * Version: 0.2
  * Author: Mike Robinson
  * Author URI: http://www.digitalegg.net
  *
@@ -52,15 +52,15 @@ class Mloovi_Widget extends WP_Widget {
 		$language_url = "http://mloovi.com/api/languages";
 		
 		/* Get Languages from Mloovi.com */
-		   $ch = curl_init(); 
-		   curl_setopt($ch, CURLOPT_URL, $language_url); 
-		   curl_setopt($ch, CURLOPT_HEADER, 0); 
-		   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-		   curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
-		   curl_setopt($ch, CURLOPT_TIMEOUT, 2);
-		   curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.5) Gecko/20041107 Firefox/1.0'); 
-		   $languages = curl_exec($ch); 
-		   curl_close($ch);	
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_URL, $language_url); 
+		curl_setopt($ch, CURLOPT_HEADER, 0); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 2);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.5) Gecko/20041107 Firefox/1.0'); 
+		$languages = curl_exec($ch); 
+		curl_close($ch);	
    		$this->languages = unserialize( $languages );
    		wp_enqueue_script("jquery");
 	}
@@ -135,6 +135,18 @@ var $j = jQuery.noConflict();
 		foreach( $this->languages AS $key => $value ) {
 			$instance[$key] = $new_instance[$key]; 	
 		}
+		$ch = curl_init();
+		$url = "http://mloovi.com/mloovi/translate";
+		$rss_feed = get_bloginfo( 'rss2_url' );
+		$params = "data[to]=cs&data[url]={$rss_feed}&data[short_tag]={$new_instance['feed_url']}";
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HEADER, 0); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		if ( $params ) {
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $params );
+		}
+		$body = curl_exec($ch);
+		curl_close($ch);		
 		return $instance;
 	}
 
@@ -165,14 +177,9 @@ var $j = jQuery.noConflict();
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', 'hybrid'); ?></label>
 			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		</p>
-
-		<!-- Your Name: Text Input -->
 		<p>
-			To get a custom Mloovi URL please add your feed to <a href="http://mloovi.com">Mloovi</a> then send an email to support@mloovi.com, this will be automated in future releases.
-		</p>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'feed_url' ); ?>"><?php _e('Mloovi Custom URL:', 'mloovi'); ?></label>
-			<input id="<?php echo $this->get_field_id( 'feed_url' ); ?>" name="<?php echo $this->get_field_name( 'feed_url' ); ?>" value="<?php echo $instance['feed_url']; ?>" style="width:100%;" />
+			<!--  <label for="<?php echo $this->get_field_id( 'feed_url' ); ?>"><?php _e('Mloovi Custom URL:', 'mloovi'); ?></label> -->
+			<input id="<?php echo $this->get_field_id( 'feed_url' ); ?>" name="<?php echo $this->get_field_name( 'feed_url' ); ?>" value="<?php echo $instance['feed_url']; ?>" style="width:100%;" type="hidden" />
 		</p>
 		<!-- <a href="#" id="selectall" style="clear:both;">Select All</a> -->
 		<p>Which languages do you want to show?</p>
