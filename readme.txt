@@ -4,11 +4,13 @@ Donate link: http://mloovi.com/donate
 Tags: mloovi, translate, blog, rss
 Requires at least: 2.8
 Tested up to: 2.9.1
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 
 Translate your blog into 52 languages instantly!
 
 == Description ==
+
+* Note: You will need to add your feed to Mloovi.com and request a Custom URL by emailing support[at]mloovi[dot]com for the widget to work. *
 
 The Mloovi widget allows you to easily add links to 52 different language versions of your blog and RSS feeds.
 
@@ -49,6 +51,10 @@ If you want this service send an email to support@mloovi.com with the URL of you
 = 0.1.1 =
 
 Minor release which includes better instructions on how to get a Mloovi custom URL.
+
+= 0.1.2 =
+
+Added more instructions on how to get the widget to work.
 
 == Upgrade Notice ==
 
