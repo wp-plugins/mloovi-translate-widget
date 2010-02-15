@@ -3,7 +3,7 @@
  * Plugin Name: Mloovi Translate Widget
  * Plugin URI: http://mloovi.com/pages/wordpress-plugin
  * Description: Translate your blog into 52 languages instantly!
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: Mike Robinson
  * Author URI: http://www.digitalegg.net
  *
@@ -56,6 +56,8 @@ class Mloovi_Widget extends WP_Widget {
 		   curl_setopt($ch, CURLOPT_URL, $language_url); 
 		   curl_setopt($ch, CURLOPT_HEADER, 0); 
 		   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		   curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
+		   curl_setopt($ch, CURLOPT_TIMEOUT, 2);
 		   curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.5) Gecko/20041107 Firefox/1.0'); 
 		   $languages = curl_exec($ch); 
 		   curl_close($ch);	
