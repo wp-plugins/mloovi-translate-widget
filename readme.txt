@@ -4,7 +4,7 @@ Donate link: http://mloovi.com/donate
 Tags: mloovi, translate, blog, rss
 Requires at least: 2.8
 Tested up to: 2.9.1
-Stable tag: 0.2
+Stable tag: 0.2.1
 
 Translate your blog into 52 languages instantly!
 

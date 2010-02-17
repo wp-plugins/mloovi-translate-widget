@@ -3,7 +3,7 @@
  * Plugin Name: Mloovi Translate Widget
  * Plugin URI: http://mloovi.com/pages/wordpress-plugin
  * Description: Translate your blog into 52 languages instantly!
- * Version: 0.2
+ * Version: 0.2.1
  * Author: Mike Robinson
  * Author URI: http://www.digitalegg.net
  *
@@ -103,15 +103,19 @@ var $j = jQuery.noConflict();
 
 		/* Display name from widget settings if one was input. */
 		echo '<div id="mloovi-languages-show"><ul>';			
+		$x=1;
 		foreach( $this->languages AS $key => $value ) {
 			if ( $instance[$key] == "on" ) {
+				$x++;
 				echo "<li><a href=\"http://{$key}.mloovi.com/{$feed_url}\">{$value}</a></li>";
 			}
 		}
 		echo '</ul>';
-		echo '<div style="display:block;">';
-		echo '<a href="#" id="mloovi-more-languages">more</a></div>';
-		echo '</div>';
+		if ( count($this->languages) > $x ) {
+			echo '<div style="display:block;">';
+			echo '<a href="#" id="mloovi-more-languages">more</a></div>';
+			echo '</div>';
+		}
 		echo '<div id="mloovi-languages-hidden" style="display:none;"><ul>';
 		foreach( $this->languages AS $key => $value ) {
 			if ( $instance[$key] != "on" ) {
