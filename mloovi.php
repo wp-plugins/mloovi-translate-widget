@@ -162,7 +162,9 @@ var $j = jQuery.noConflict();
 	function form( $instance ) {
 
 		/* Set up some default widget settings. */
-		$defaults = array( 'title' => __('Mloovi', 'mloovi'),'feed_url' => str_replace("http://","",get_bloginfo( 'wpurl' )) );
+		$wp_url = str_replace("http://","",get_bloginfo( 'wpurl' ));
+		$wp_url = str_replace("/","_",$wp_url);
+		$defaults = array( 'title' => __('Mloovi', 'mloovi'),'feed_url' => $wp_url );
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 		<script type="text/javascript">
 			jQuery(function(){
