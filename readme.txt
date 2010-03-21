@@ -3,8 +3,8 @@ Contributors: mikedigitalegg
 Donate link: http://mloovi.com/donate
 Tags: mloovi, translate, blog, rss
 Requires at least: 2.8
-Tested up to: 2.9.1
-Stable tag: 0.2.1
+Tested up to: 2.9.2
+Stable tag: 0.2.2
 
 Translate your blog into 52 languages instantly!
 
@@ -24,6 +24,7 @@ This can have incredible results for SEO, we currently have sites indexed by ove
 
 1. Upload `mloovi` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Go to the Widgets page and add it to your sidebar
 
 == Frequently Asked Questions ==
 
@@ -62,6 +63,10 @@ Added timeout to the CURL functions in case of problems with mloovi.com
 
 The widget now auto generates the feeds on Mloovi.com and the custom URL. The widget should now work first time without any intervention!
 
+= 0.2.2 =
+
+Bug fix to stop errors if languages pulled from Mloovi.com fail
+
 == Upgrade Notice ==
 
 = 0.1 =
@@ -77,3 +82,7 @@ Added timeout to the CURL functions in case of problems with mloovi.com
 = 0.2 =
 
 The widget now auto generates the feeds on Mloovi.com and the custom URL. The widget should now work first time without any intervention!
+
+= 0.2.2 =
+
+Bug fix to stop errors if languages pulled from Mloovi.com fail

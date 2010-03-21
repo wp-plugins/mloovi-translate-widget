@@ -3,7 +3,7 @@
  * Plugin Name: Mloovi Translate Widget
  * Plugin URI: http://mloovi.com/pages/wordpress-plugin
  * Description: Translate your blog into 52 languages instantly!
- * Version: 0.2.1
+ * Version: 0.2.2
  * Author: Mike Robinson
  * Author URI: http://www.digitalegg.net
  *
@@ -117,9 +117,11 @@ var $j = jQuery.noConflict();
 			echo '</div>';
 		}
 		echo '<div id="mloovi-languages-hidden" style="display:none;"><ul>';
-		foreach( $this->languages AS $key => $value ) {
-			if ( $instance[$key] != "on" ) {
-				echo "<li><a href=\"http://{$key}.mloovi.com/{$feed_url}\">{$value}</a></li>";
+		if ( !empty( $this->languages ) ) {
+			foreach( $this->languages AS $key => $value ) {
+				if ( $instance[$key] != "on" ) {
+					echo "<li><a href=\"http://{$key}.mloovi.com/{$feed_url}\">{$value}</a></li>";
+				}
 			}
 		}
 		echo '</ul></div>';
@@ -136,8 +138,10 @@ var $j = jQuery.noConflict();
 		/* Strip tags for title and name to remove HTML (important for text inputs). */
 		$instance['title'] = strip_tags( $new_instance['title'] );
 		$instance['feed_url'] = strip_tags( $new_instance['feed_url'] );
-		foreach( $this->languages AS $key => $value ) {
-			$instance[$key] = $new_instance[$key]; 	
+		if ( !empty( $this->languages ) ) {
+			foreach( $this->languages AS $key => $value ) {
+				$instance[$key] = $new_instance[$key]; 	
+			}
 		}
 		$ch = curl_init();
 		$url = "http://mloovi.com/mloovi/translate";
@@ -190,7 +194,7 @@ var $j = jQuery.noConflict();
 		<!-- <a href="#" id="selectall" style="clear:both;">Select All</a> -->
 		<p>Which languages do you want to show?</p>
 		<div style="display:block;overflow:auto;height:300px;">
-
+		<?php if ( !empty( $this->languages ) ) { ?>
 		<?php foreach( $this->languages AS $key => $value ) { ?>
 			<?php if ( $key != substr(get_bloginfo('language'),0,2)) { ?>
 			<div style="width:50%;float:left">
@@ -198,6 +202,7 @@ var $j = jQuery.noConflict();
 			<label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo _e($value); ?></label>
 			</div>
 			<?php } ?>
+		<?php } ?>
 		<?php } ?>
 		</div>
 	<?php
